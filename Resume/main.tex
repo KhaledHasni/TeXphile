@@ -18,6 +18,7 @@
 \usepackage{fontawesome5}
 \usepackage{multicol}
 \usepackage{ifthen}
+\usepackage{tikz}
 \input{glyphtounicode}
 
 % Customize headers and footers
@@ -41,14 +42,15 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
 % Ensures the generated pdf is machine readable and ATS parsable
 \pdfgentounicode=1
 
 \begin{document}
+    \input{custom_commands}
+    \input{customize}
     \input{header}
+    \input{professional_experience}
+    \input{projects}
+    \input{skills}
+    \input{education}
 \end{document}

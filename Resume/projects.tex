@@ -1,0 +1,18 @@
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TeXfolio ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% TeXfolio Resume template
+% Designed & Created by: Khaled Hasni
+% Shared & Distributed under the terms of the MIT license
+% projects.tex: Creates a section for personal projects
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\ifthenelse{\equal{\Projects}{y}}{
+    \section{Projects}
+        \vspace{-5pt}
+        \ResumeEntryList
+            \foreach \ProjectName\Keywords\Timespan in \ProjectsEntries {
+                \ResumeProjectHeader
+                    {\textbf{\ProjectName} $|$ \emph{\Keywords}}{\Timespan}
+            }
+        \ResumeEntryListClose
+        \vspace{-15pt}
+}{}

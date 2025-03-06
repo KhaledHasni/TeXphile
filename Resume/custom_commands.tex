@@ -1,0 +1,31 @@
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~ TeXfolio ~~~~~~~~~~~~~~~~~~~~~~~~~~
+% TeXfolio Resume template
+% Designed & Created by: Khaled Hasni
+% Shared & Distributed under the terms of the MIT license
+% custom_commands.tex: Defines custom commands used all over
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Resume entry utility commands
+\newcommand{\ResumeEntryList}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\ResumeEntryListClose}{\end{itemize}}
+\newcommand{\ResumeItemList}{\begin{itemize}}
+\newcommand{\ResumeItemListClose}{\end{itemize}\vspace{-5pt}}
+\newcommand{\ResumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\ResumeEntry}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\ResumeProjectHeader}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}

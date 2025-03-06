@@ -1,0 +1,116 @@
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TeXfolio ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% TeXfolio Resume template
+% Designed & Created by: Khaled Hasni
+% Shared & Distributed under the terms of the MIT license
+% customize.tex: Customizes the resume by adding/removing certain features
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% ************************************ Resume Header ************************************
+% 1) Personal information:
+% Use these string literals to set your personal information (Full name, Job title, Phone number, Email address, Linkedin profile, Github profile).
+% This information will be displayed in the resume header.
+\def\MyFullName{Khaled Hasni}
+\def\MyJobTitle{Software Engineer | Firmware Consultant}
+\def\MyPhoneNumber{+x xx xxx xxx}
+\def\MyEmailAddress{Not.Khaled.Hasni@gmail.com}
+\def\MyLinkedinProfile{linkedin.com/in/khaledhasni}
+\def\MyGithubProfile{github.com/KhaledHasni}
+
+% 2) Toggle switches:
+% Use these to toggle some of the resume header features on and off
+% y --> On
+% n --> Off
+% Example:
+% \newcommand\UseIcons{n} to remove all icons (phone, email, linkedin, github)
+\newcommand{\SmallCaps}{y}
+\newcommand{\PhoneNbr}{y}
+\newcommand{\EmailAddr}{y}
+\newcommand{\LinkedinProf}{y}
+\newcommand{\GithubProf}{y}
+\newcommand{\UseIcons}{y}
+
+% *************************** Professional Experience Section ***************************
+
+% 1) Toggle switches:
+% y --> Keep Professional Experience section
+% n --> Remove Professional Experience section
+\newcommand{\ProfessionalExperience}{y}
+
+% 2) Professional Experience listings:
+% Use this to enumerate the different professional experiences you had. There's no limit on the number of experiences you can list.
+% Every experience should contain at most 4 entries (Institute, Timespan, Role, Location).
+% Don't forget the comma ',' seperator if you add/remove entries.
+% Removing an entry is possible. To do that, make sure to leave an empty set of curly brackets {}.
+\newcommand{\ProfessionalExperienceEntries}
+{
+    % Most recent professional experience 
+    {SoftAtHome}/{February 2024 -- Present}/{Embedded Linux Engineer}/{Wijgmaal, Belgium (Remote)},
+    % 2nd most recent professional experience
+    {Valeo}/{March 2023 -- February 2024}/{Lead Firmware Consultant}/{Paris, France (Remote)},
+    % 3rd most recent professional experience
+    {Sofia Technologies}/{November 2021 -- February 2024}/{Embedded Software Engineer}/{Tunis, Tunisia}
+}
+
+\newcommand{\ProfessionalExperienceAchievements}
+{{khaled,maha,neji},{bachir,ahlem,hedia},{ali,hakima,hsan}}
+
+% ********************************** Projects Section ***********************************
+
+% 1) Toggle switches:
+% y --> Keep Projects section
+% n --> Remove Projects section
+\newcommand{\Projects}{y}
+
+% 2) Projects listings:
+% Use this to enumerate the different projects you have. There's no limit on the number of projects you can list.
+% Every project should contain at most 3 entries (Name, Keywords, Timespan).
+% Don't forget the comma ',' seperator if you add/remove entries.
+% Removing an entry is possible. To do that, make sure to leave an empty set of curly brackets {}.
+\newcommand{\ProjectsEntries}
+{
+    % 1st project 
+    {Gym Reservation Bot}/{Python, Selenium, Google Cloud Console}/{January 2021},
+    % 2nd project
+    {Ticket Price Calculator App}/{Java, Android Studio}/{November 2020},
+    % 3rd project
+    {Transaction Management GUI}/{Java, Eclipse, JavaFX}/{October 2020}
+}
+
+
+% ************************************ Skills Section *************************************
+
+% 1) Toggle switches:
+% y --> Keep Skills section
+% n --> Remove Skills section
+\newcommand{\Skills}{y}
+
+% Use these toggle switches to keep/remove the different skill sets.
+% y --> Keep skill set
+% n --> Remove skill set
+\newcommand{\Languages}{y}
+\newcommand{\DeveloperTools}{y}
+\newcommand{\UnitTestingAndFrameworks}{y}
+\newcommand{\RevisionControl}{y}
+\newcommand{\BuildAndDeployment}{y}
+
+% ********************************** Education Section **********************************
+
+% 1) Toggle switches:
+% y --> Keep Education section
+% n --> Remove Education section
+\newcommand{\Education}{y}
+
+% 2) Education listings:
+% Use this to enumerate the education experiences you had. There's no limit on the number of experiences you can list.
+% Every experience should contain at most 4 entries (Institute, Timespan, Coursework, Location).
+% Don't forget the comma ',' seperator if you add/remove entries.
+% Removing an entry is possible. To do that, make sure to leave an empty set of curly brackets {}.
+\newcommand{\EducationEntries}
+{
+    % Most recent education experience 
+    {ENIT}/{March 2023 -- February 2024}/{Electrical Engineering degree}/{Tunis, Tunisia},
+    % 2nd most recent education experience
+    {IPEST}/{February 2024 -- Present}/{Maths/Physics}/{Tunis, Tunisia},
+    % 3rd most recent education experience
+    {Lycee Pilote Ariana}/{November 2021 -- February 2024}/{Highschool degree}/{Tunis, Tunisia}
+}

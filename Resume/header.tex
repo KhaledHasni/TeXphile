@@ -5,29 +5,6 @@
 % header.tex: Creates the layout of the resume's header
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-% ********* Personal information *********
-% Use these string literals to set your personal information (Full name, Job title, Phone number, Email address, Linkedin profile, Github profile).
-% This information will be displayed in the resume header.
-\def\MyFullName{Khaled Hasni}
-\def\MyJobTitle{Software Engineer | Firmware Consultant}
-\def\MyPhoneNumber{+x xx xxx xxx}
-\def\MyEmailAddress{Not.Khaled.Hasni@gmail.com}
-\def\MyLinkedinProfile{linkedin.com/in/khaledhasni}
-\def\MyGithubProfile{github.com/KhaledHasni}
-
-% *********** Toggle switches ***********
-% Use these to toggle some of the resume header features on and off
-% y --> On
-% n --> Off
-% Example:
-% \newcommand\UseIcons{n} to remove all icons (phone, email, linkedin, github)
-\newcommand{\SmallCaps}{y}
-\newcommand{\PhoneNbr}{y}
-\newcommand{\EmailAddr}{y}
-\newcommand{\LinkedinProf}{y}
-\newcommand{\GithubProf}{y}
-\newcommand{\UseIcons}{y}
-
 % ***************** Profile URLs *****************
 \edef\MyLinkedinProfileURL{https://\MyLinkedinProfile}
 \edef\MyGithubProfileURL{https://\MyGithubProfile}
@@ -61,7 +38,7 @@
         }{}
         {\fontsize{10pt}{12pt}\selectfont \MyPhoneNumber}
         }
-    \hspace{-4mm}
+    \hspace{-5.5mm}
     }{}  
 
     % *E-mail entry*
@@ -75,7 +52,7 @@
         }
         %else
         {\href{mailto:\MyEmailAddress}{\fontsize{10pt}{12pt}\selectfont \MyEmailAddress}}
-    \hspace{-4mm}
+    \hspace{-5.5mm}
     }{}
 
     % *Linkedin entry*
@@ -89,7 +66,7 @@
         }
         %else
         {\href{\MyLinkedinProfileURL}{\fontsize{10pt}{12pt}\selectfont \MyLinkedinProfile}}
-    \hspace{-4mm}
+    \hspace{-5.5mm}
     }{}
 
     % *Github entry*
