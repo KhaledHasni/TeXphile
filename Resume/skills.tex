@@ -10,19 +10,19 @@
         \begin{itemize}
             \setlength{\itemsep}{-4pt}
             \small{
-                \ifthenelse{\equal{\Languages}{y}}{
+                \ifthenelse{\equal{\FirstCategory}{y}}{
                     \item\textbf{Languages}{: C, Python, Shell}
                 }{}
-                \ifthenelse{\equal{\DeveloperTools}{y}}{
+                \ifthenelse{\equal{\SecondCategory}{y}}{
                     \item\textbf{Developer Tools}{: Docker, Kubernetes, Klocwork, Valgrind}
                 }{}
-                \ifthenelse{\equal{\UnitTestingAndFrameworks}{y}}{
+                \ifthenelse{\equal{\ThirdCategory}{y}}{
                     \item\textbf{Unit Testing tools \& Frameworks}{: VectorCAST, Cmocka, Unity}
                 }{}
-                \ifthenelse{\equal{\RevisionControl}{y}}{
+                \ifthenelse{\equal{\FourthCategory}{y}}{
                     \item\textbf{Revision Control}{: Git, Mercurial}
                 }{}
-                \ifthenelse{\equal{\BuildAndDeployment}{y}}{
+                \ifthenelse{\equal{\FifthCategory}{y}}{
                     \item\textbf{Build \& Deployment}{: Yocto, Make, PlatformIO}
                 }{}
             }
