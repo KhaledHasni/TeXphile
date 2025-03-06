@@ -1,0 +1,22 @@
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TeXfolio ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% TeXfolio Resume template
+% Designed & Created by: Khaled Hasni
+% Shared & Distributed under the terms of the MIT license
+% professional_experience.tex: Creates a section for professional experience
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\ifthenelse{\equal{\ProfessionalExperience}{y}}{
+    \section{Professional Experience}
+        \ResumeEntryList
+            \foreach \Institute\Timespan\Role\Location in \ProfessionalExperienceEntries {
+                \ResumeEntry \Institute\Timespan\Role\Location
+                %\ResumeItemList
+                    %\foreach \AchievementList in \ProfessionalExperienceAchievements {
+                    %    \foreach \Achievement in \AchievementList {
+                    %        \ResumeItem \Achievement
+                    %    }
+                    %}
+                %\ResumeItemListClose
+            }
+        \ResumeEntryListClose
+}{}

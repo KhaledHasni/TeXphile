@@ -1,0 +1,22 @@
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TeXfolio ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% TeXfolio Resume template
+% Designed & Created by: Khaled Hasni
+% Shared & Distributed under the terms of the MIT license
+% education.tex: Creates a section for education
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\ifthenelse{\equal{\Education}{y}}{
+    \section{Education}
+        \ResumeEntryList
+            \foreach \Institute\Timespan\Coursework\Location in \EducationEntries {
+                \ResumeEntry \Institute\Timespan\Coursework\Location
+                %\ResumeItemList
+                    %\foreach \AchievementList in \ProfessionalExperienceAchievements {
+                    %    \foreach \Achievement in \AchievementList {
+                    %        \ResumeItem \Achievement
+                    %    }
+                    %}
+                %\ResumeItemListClose
+            }
+        \ResumeEntryListClose
+}{}
