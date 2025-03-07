@@ -15,103 +15,134 @@
                     % Case 1
                     \ifthenelse{\equal{\EnableFirstProfessionalExperience}{y}}{
                         \ResumeEntry \Institute\Timespan\Role\Location
-                        \ResumeItemList
+                        \ifthenelse{\equal{\FirstProfessionalExperienceAchievements}{}}{}
+                        {
+                            \ResumeItemList
                             \foreach \Achievement in \FirstProfessionalExperienceAchievements {
                                 \ResumeItem \Achievement
                             }
-                        \ResumeItemListClose
+                            \ResumeItemListClose
+                        }
                     }{}
                 \or
                     % Case 2
                     \ifthenelse{\equal{\EnableSecondProfessionalExperience}{y}}{
                         \ResumeEntry \Institute\Timespan\Role\Location
-                        \ResumeItemList
+                        \ifthenelse{\equal{\SecondProfessionalExperienceAchievements}{}}{}
+                        {
+                            \ResumeItemList
                             \foreach \Achievement in \SecondProfessionalExperienceAchievements {
                                 \ResumeItem \Achievement
                             }
-                        \ResumeItemListClose
+                            \ResumeItemListClose
+                        }
                     }{}
                 \or
                     % Case 3
                     \ifthenelse{\equal{\EnableThirdProfessionalExperience}{y}}{
                         \ResumeEntry \Institute\Timespan\Role\Location
-                        \ResumeItemList
+                        \ifthenelse{\equal{\ThirdProfessionalExperienceAchievements}{}}{}
+                        {
+                            \ResumeItemList
                             \foreach \Achievement in \ThirdProfessionalExperienceAchievements {
                                 \ResumeItem \Achievement
                             }
-                        \ResumeItemListClose
+                            \ResumeItemListClose
+                        }
                     }{}
                 \or
                     % Case 4
                     \ifthenelse{\equal{\EnableFourthProfessionalExperience}{y}}{
                         \ResumeEntry \Institute\Timespan\Role\Location
-                        \ResumeItemList
+                        \ifthenelse{\equal{\FourthProfessionalExperienceAchievements}{}}{}
+                        {
+                            \ResumeItemList
                             \foreach \Achievement in \FourthProfessionalExperienceAchievements {
                                 \ResumeItem \Achievement
                             }
-                        \ResumeItemListClose
+                            \ResumeItemListClose
+                        }
                     }{}
                 \or
                     % Case 5
                     \ifthenelse{\equal{\EnableFifthProfessionalExperience}{y}}{
                         \ResumeEntry \Institute\Timespan\Role\Location
-                        \ResumeItemList
+                        \ifthenelse{\equal{\FifthProfessionalExperienceAchievements}{}}{}
+                        {
+                            \ResumeItemList
                             \foreach \Achievement in \FifthProfessionalExperienceAchievements {
                                 \ResumeItem \Achievement
                             }
-                        \ResumeItemListClose
+                            \ResumeItemListClose
+                        }
                     }{}
                 \or
                     % Case 6
                     \ifthenelse{\equal{\EnableSixthProfessionalExperience}{y}}{
                         \ResumeEntry \Institute\Timespan\Role\Location
-                        \ResumeItemList
+                        \ifthenelse{\equal{\SixthProfessionalExperienceAchievements}{}}{}
+                        {
+                            \ResumeItemList
                             \foreach \Achievement in \SixthProfessionalExperienceAchievements {
                                 \ResumeItem \Achievement
                             }
-                        \ResumeItemListClose
+                            \ResumeItemListClose
+                        }
                     }{} 
                 \or
                     % Case 7
                     \ifthenelse{\equal{\EnableSeventhProfessionalExperience}{y}}{
                         \ResumeEntry \Institute\Timespan\Role\Location
-                        \ResumeItemList
+                        \ifthenelse{\equal{\SeventhProfessionalExperienceAchievements}{}}{}
+                        {
+                            \ResumeItemList
                             \foreach \Achievement in \SeventhProfessionalExperienceAchievements {
                                 \ResumeItem \Achievement
                             }
-                        \ResumeItemListClose
+                            \ResumeItemListClose
+                        }
                     }{}
                 \or
                     % Case 8
                     \ifthenelse{\equal{\EnableEighthProfessionalExperience}{y}}{
                         \ResumeEntry \Institute\Timespan\Role\Location
-                        \ResumeItemList
+                        \ifthenelse{\equal{\EighthProfessionalExperienceAchievements}{}}{}
+                        {
+                            \ResumeItemList
                             \foreach \Achievement in \EighthProfessionalExperienceAchievements {
                                 \ResumeItem \Achievement
                             }
-                        \ResumeItemListClose
+                            \ResumeItemListClose
+                        }
                     }{}
                 \or
                     % Case 9
                     \ifthenelse{\equal{\EnableNinthProfessionalExperience}{y}}{
                         \ResumeEntry \Institute\Timespan\Role\Location
-                        \ResumeItemList
+                        \ifthenelse{\equal{\NinthProfessionalExperienceAchievements}{}}{}
+                        {
+                            \ResumeItemList
                             \foreach \Achievement in \NinthProfessionalExperienceAchievements {
                                 \ResumeItem \Achievement
                             }
-                        \ResumeItemListClose
+                            \ResumeItemListClose
+                        }
                     }{} 
                 \or
                     % Case 10
                     \ifthenelse{\equal{\EnableTenthProfessionalExperience}{y}}{
                         \ResumeEntry \Institute\Timespan\Role\Location
-                        \ResumeItemList
+                        \ifthenelse{\equal{\TenthProfessionalExperienceAchievements}{}}{}
+                        {
+                            \ResumeItemList
                             \foreach \Achievement in \TenthProfessionalExperienceAchievements {
                                 \ResumeItem \Achievement
                             }
-                        \ResumeItemListClose
-                    }{} 
+                            \ResumeItemListClose
+                        }
+                    }{}
                 \fi
             }
         \ResumeEntryListClose
+        \vspace{-16pt}
 }{}

@@ -9,9 +9,169 @@
     \section{Projects}
         \vspace{-5pt}
         \ResumeEntryList
-            \foreach \ProjectName\Keywords\Timespan in \ProjectsEntries {
-                \ResumeProjectHeader
-                    {\textbf{\ProjectName} $|$ \emph{\Keywords}}{\Timespan}
+            \foreach \ProjectName\Keywords\Timespan [count=\Index] in \ProjectsEntries {
+                \ifcase\Index
+                    % Case 0, we don't need this
+                \or
+                    % Case 1
+                    \ifthenelse{\equal{\EnableFirstProject}{y}}{
+                        \ResumeProjectHeader
+                            {\textbf{\ProjectName} \ifx\Keywords\empty\else $|$ \emph{\Keywords}\fi}{\Timespan}
+                        \ifthenelse{\equal{\FirstProjectAchievements}{}}{}
+                        {
+                            \vspace{-13pt}
+                            \ResumeItemList
+                                \foreach \Achievement in \FirstProjectAchievements {
+                                    \ResumeItem \Achievement
+                                }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 2
+                    \ifthenelse{\equal{\EnableSecondProject}{y}}{
+                        \vspace{-13pt}
+                        \ResumeProjectHeader
+                            {\textbf{\ProjectName} \ifx\Keywords\empty\else $|$ \emph{\Keywords}\fi}{\Timespan}
+                        \ifthenelse{\equal{\SecondProjectAchievements}{}}{}
+                        {
+                            \vspace{-13pt}
+                            \ResumeItemList
+                                \foreach \Achievement in \SecondProjectAchievements {
+                                    \ResumeItem \Achievement
+                                }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 3
+                    \ifthenelse{\equal{\EnableThirdProject}{y}}{
+                        \vspace{-13pt}
+                        \ResumeProjectHeader
+                            {\textbf{\ProjectName} \ifx\Keywords\empty\else $|$ \emph{\Keywords}\fi}{\Timespan}
+                        \ifthenelse{\equal{\ThirdProjectAchievements}{}}{}
+                        {
+                            \vspace{-13pt}
+                            \ResumeItemList
+                            \foreach \Achievement in \ThirdProjectAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 4
+                    \ifthenelse{\equal{\EnableFourthProject}{y}}{
+                        \vspace{-13pt}
+                        \ResumeProjectHeader
+                            {\textbf{\ProjectName} \ifx\Keywords\empty\else $|$ \emph{\Keywords}\fi}{\Timespan}
+                        \ifthenelse{\equal{\FourthProjectAchievements}{}}{}
+                        {
+                            \vspace{-13pt}
+                            \ResumeItemList
+                            \foreach \Achievement in \FourthProjectAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 5
+                    \ifthenelse{\equal{\EnableFifthProject}{y}}{
+                        \vspace{-13pt}
+                        \ResumeProjectHeader
+                            {\textbf{\ProjectName} \ifx\Keywords\empty\else $|$ \emph{\Keywords}\fi}{\Timespan}
+                        \ifthenelse{\equal{\FifthProjectAchievements}{}}{}
+                        {
+                            \vspace{-13pt}
+                            \ResumeItemList
+                            \foreach \Achievement in \FifthProjectAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 6
+                    \ifthenelse{\equal{\EnableSixthProject}{y}}{
+                        \vspace{-13pt}
+                        \ResumeProjectHeader
+                            {\textbf{\ProjectName} \ifx\Keywords\empty\else $|$ \emph{\Keywords}\fi}{\Timespan}
+                        \ifthenelse{\equal{\SixthProjectAchievements}{}}{}
+                        {
+                            \vspace{-13pt}
+                            \ResumeItemList
+                            \foreach \Achievement in \SixthProjectAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 7
+                    \ifthenelse{\equal{\EnableSeventhProject}{y}}{
+                        \vspace{-13pt}
+                        \ResumeProjectHeader
+                            {\textbf{\ProjectName} \ifx\Keywords\empty\else $|$ \emph{\Keywords}\fi}{\Timespan}
+                        \ifthenelse{\equal{\SeventhProjectAchievements}{}}{}
+                        {
+                            \vspace{-13pt}
+                            \ResumeItemList
+                            \foreach \Achievement in \SeventhProjectAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 8
+                    \ifthenelse{\equal{\EnableEighthProject}{y}}{
+                        \vspace{-13pt}
+                        \ResumeProjectHeader
+                            {\textbf{\ProjectName} \ifx\Keywords\empty\else $|$ \emph{\Keywords}\fi}{\Timespan}
+                        \ifthenelse{\equal{\EighthProjectAchievements}{}}{}
+                        {
+                            \vspace{-13pt}
+                            \ResumeItemList
+                            \foreach \Achievement in \EighthProjectAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 9
+                    \ifthenelse{\equal{\EnableNinthProject}{y}}{
+                        \vspace{-13pt}
+                        \ResumeProjectHeader
+                            {\textbf{\ProjectName} \ifx\Keywords\empty\else $|$ \emph{\Keywords}\fi}{\Timespan}
+                        \ifthenelse{\equal{\NinthProjectAchievements}{}}{}
+                        {
+                            \vspace{-13pt}
+                            \ResumeItemList
+                            \foreach \Achievement in \NinthProjectAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 10
+                    \ifthenelse{\equal{\EnableTenthProject}{y}}{
+                        \vspace{-13pt}
+                        \ResumeProjectHeader
+                            {\textbf{\ProjectName} \ifx\Keywords\empty\else $|$ \emph{\Keywords}\fi}{\Timespan}
+                        \ifthenelse{\equal{\TenthProjectAchievements}{}}{}
+                        {
+                            \vspace{-13pt}
+                            \ResumeItemList
+                            \foreach \Achievement in \TenthProjectAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \fi
             }
         \ResumeEntryListClose
         \vspace{-15pt}
