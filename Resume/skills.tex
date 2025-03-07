@@ -10,21 +10,9 @@
         \begin{itemize}
             \setlength{\itemsep}{-4pt}
             \small{
-                \ifthenelse{\equal{\FirstCategory}{y}}{
-                    \item\textbf{Languages}{: C, Python, Shell}
-                }{}
-                \ifthenelse{\equal{\SecondCategory}{y}}{
-                    \item\textbf{Developer Tools}{: Docker, Kubernetes, Klocwork, Valgrind}
-                }{}
-                \ifthenelse{\equal{\ThirdCategory}{y}}{
-                    \item\textbf{Unit Testing tools \& Frameworks}{: VectorCAST, Cmocka, Unity}
-                }{}
-                \ifthenelse{\equal{\FourthCategory}{y}}{
-                    \item\textbf{Revision Control}{: Git, Mercurial}
-                }{}
-                \ifthenelse{\equal{\FifthCategory}{y}}{
-                    \item\textbf{Build \& Deployment}{: Yocto, Make, PlatformIO}
-                }{}
+                \foreach \CategotyName\Entries in \SkillsEntries {
+                    \item\textbf{\CategotyName}{: \Entries}
+                }
             }
         \end{itemize}
         \vspace{-16pt}
