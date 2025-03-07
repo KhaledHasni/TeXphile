@@ -36,23 +36,114 @@
 % n --> Remove Professional Experience section
 \newcommand{\ProfessionalExperience}{y}
 
+% Use these toggle switches to add/take away a professional experience.
+% y --> Keep professional experience
+% n --> Remove professional experience
+% Example: If you wish to mention 2 professional experiences, set the first and second toggle switches and clear the rest:
+% \newcommand{\EnableFirstProfessionalExperience}{y}
+% \newcommand{\EnableSecondProfessionalExperience}{y}
+% \newcommand{\EnableThirdProfessionalExperience}{n}
+% \newcommand{\EnableFourthProfessionalExperience}{n}
+% \newcommand{\EnableFifthProfessionalExperience}{n}
+% \newcommand{\EnableSixthProfessionalExperience}{n}
+% \newcommand{\EnableSeventhProfessionalExperience}{n}
+% \newcommand{\EnableEighthProfessionalExperience}{n}
+% \newcommand{\EnableNinthProfessionalExperience}{n}
+% \newcommand{\EnableTenthProfessionalExperience}{n}
+% Note: A maximum of 10 experiences is supported.
+\newcommand{\EnableFirstProfessionalExperience}{y}
+\newcommand{\EnableSecondProfessionalExperience}{y}
+\newcommand{\EnableThirdProfessionalExperience}{y}
+\newcommand{\EnableFourthProfessionalExperience}{n}
+\newcommand{\EnableFifthProfessionalExperience}{n}
+\newcommand{\EnableSixthProfessionalExperience}{n}
+\newcommand{\EnableSeventhProfessionalExperience}{n}
+\newcommand{\EnableEighthProfessionalExperience}{n}
+\newcommand{\EnableNinthProfessionalExperience}{n}
+\newcommand{\EnableTenthProfessionalExperience}{n}
+
 % 2) Professional Experience listings:
 % Use this to enumerate the different professional experiences you had. There's no limit on the number of experiences you can list.
 % Every experience should contain at most 4 entries (Institute, Timespan, Role, Location).
 % Don't forget the comma ',' seperator if you add/remove entries.
 % Removing an entry is possible. To do that, make sure to leave an empty set of curly brackets {}.
+% !!! IMPORTANT NOTE: The number of entries here should match the number of professional experiences set by the toggle switches above !!!
 \newcommand{\ProfessionalExperienceEntries}
 {
-    % Most recent professional experience 
+    % 1st professional experience
     {SoftAtHome}/{February 2024 -- Present}/{Embedded Linux Engineer}/{Wijgmaal, Belgium (Remote)},
-    % 2nd most recent professional experience
+    % 2nd professional experience
     {Valeo}/{March 2023 -- February 2024}/{Lead Firmware Consultant}/{Paris, France (Remote)},
-    % 3rd most recent professional experience
+    % 3rd professional experience
     {Sofia Technologies}/{November 2021 -- February 2024}/{Embedded Software Engineer}/{Tunis, Tunisia}
 }
 
-\newcommand{\ProfessionalExperienceAchievements}
-{{khaled,maha,neji},{bachir,ahlem,hedia},{ali,hakima,hsan}}
+% 3) Achievements and highlights of all professional experiences:
+
+% List 1st professional experience achievements here if applicable
+\newcommand{\FirstProfessionalExperienceAchievements}
+{
+    {Developed a service to automatically perform a set of unit tests daily on a product in development in order to decrease time needed for team members to identify and fix bugs/issues},
+    {Incorporated scripts using Python and PowerShell to aggregate XML test results into an organized format and to load the latest build code onto the hardware, so that daily testing can be performed},
+    {Utilized Jenkins to provide a continuous integration service in order to automate the entire process of loading the latest build code and test files, running the tests, and generating a report of the results once per day}
+}
+
+% List 2nd professional experience achievements here if applicable
+\newcommand{\SecondProfessionalExperienceAchievements}
+{
+    {Assisted in development of the front end of a mobile application for iOS/Android using Dart and the Flutter framework},
+    {Worked with Google Firebase to manage user inputted data across multiple platforms including web and mobile apps}
+}
+
+% List 3rd professional experience achievements here if applicable
+\newcommand{\ThirdProfessionalExperienceAchievements}
+{
+    {Collaborated with team members using version control systems such as Git to organize modifications and assign tasks},
+    {Utilized Android Studio as a development environment in order to visualize the application in both iOS and Android},
+    {Explored ways to visualize and send a daily report of test results to team members  using HTML, Javascript, and CSS}
+}
+
+% List 4th professional experience achievements here if applicable
+\newcommand{\FourthProfessionalExperienceAchievements}
+{
+    {}
+}
+
+% List 5th professional experience achievements here if applicable
+\newcommand{\FifthProfessionalExperienceAchievements}
+{
+    {}
+}
+
+% List 6th professional experience achievements here if applicable
+\newcommand{\SixthProfessionalExperienceAchievements}
+{
+    {}
+}
+
+% List 7th professional experience achievements here if applicable
+\newcommand{\SeventhProfessionalExperienceAchievements}
+{
+    {}
+}
+
+% List 8th professional experience achievements here if applicable
+\newcommand{\EighthProfessionalExperienceAchievements}
+{
+    {}
+}
+
+% List 9th professional experience achievements here if applicable
+\newcommand{\NinthProfessionalExperienceAchievements}
+{
+    {}
+}
+
+% List 10th professional experience achievements here if applicable
+\newcommand{\TenthProfessionalExperienceAchievements}
+{
+    {}
+}
 
 % ********************************** Projects Section ***********************************
 
@@ -76,7 +167,6 @@
     {Transaction Management GUI}/{Java, Eclipse, JavaFX}/{October 2020}
 }
 
-
 % ************************************ Skills Section *************************************
 
 % 1) Toggle switches:
@@ -84,14 +174,20 @@
 % n --> Remove Skills section
 \newcommand{\Skills}{y}
 
-% Use these toggle switches to keep/remove the different skill sets.
-% y --> Keep skill set
-% n --> Remove skill set
-\newcommand{\Languages}{y}
-\newcommand{\DeveloperTools}{y}
-\newcommand{\UnitTestingAndFrameworks}{y}
-\newcommand{\RevisionControl}{y}
-\newcommand{\BuildAndDeployment}{y}
+% Use these toggle switches to keep/remove the different skill categories.
+% y --> Keep skill category
+% n --> Remove skill category
+% A maximum of 10 categories is supported.
+\newcommand{\FirstCategory}{y}
+\newcommand{\SecondCategory}{y}
+\newcommand{\ThirdCategory}{y}
+\newcommand{\FourthCategory}{y}
+\newcommand{\FifthCategory}{y}
+\newcommand{\SixthCategory}{y}
+\newcommand{\SeventhCategory}{y}
+\newcommand{\EighthCategory}{y}
+\newcommand{\NinthCategory}{y}
+\newcommand{\TenthCategory}{y}
 
 % ********************************** Education Section **********************************
 
