@@ -8,15 +8,140 @@
 \ifthenelse{\equal{\Education}{y}}{
     \section{Education}
         \ResumeEntryList
-            \foreach \Institute\Timespan\Coursework\Location in \EducationEntries {
-                \ResumeEntry \Institute\Timespan\Coursework\Location
-                %\ResumeItemList
-                    %\foreach \AchievementList in \ProfessionalExperienceAchievements {
-                    %    \foreach \Achievement in \AchievementList {
-                    %        \ResumeItem \Achievement
-                    %    }
-                    %}
-                %\ResumeItemListClose
+            \foreach \Institute\Timespan\Coursework\Location [count=\Index] in \EducationEntries {
+                \ifcase\Index
+                    % Case 0, we don't need this
+                \or
+                    % Case 1
+                    \ifthenelse{\equal{\EnableFirstEducation}{y}}{
+                        \ResumeEntry \Institute\Timespan\Coursework\Location
+                        \ifthenelse{\equal{\FirstEducationAchievements}{}}{}
+                        {
+                            \ResumeItemList
+                            \foreach \Achievement in \FirstEducationAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 2
+                    \ifthenelse{\equal{\EnableSecondEducation}{y}}{
+                        \ResumeEntry \Institute\Timespan\Coursework\Location
+                        \ifthenelse{\equal{\SecondEducationAchievements}{}}{}
+                        {
+                            \ResumeItemList
+                            \foreach \Achievement in \SecondEducationAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 3
+                    \ifthenelse{\equal{\EnableThirdEducation}{y}}{
+                        \ResumeEntry \Institute\Timespan\Coursework\Location
+                        \ifthenelse{\equal{\ThirdEducationAchievements}{}}{}
+                        {
+                            \ResumeItemList
+                            \foreach \Achievement in \ThirdEducationAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 4
+                    \ifthenelse{\equal{\EnableFourthEducation}{y}}{
+                        \ResumeEntry \Institute\Timespan\Coursework\Location
+                        \ifthenelse{\equal{\FourthEducationAchievements}{}}{}
+                        {
+                            \ResumeItemList
+                            \foreach \Achievement in \FourthEducationAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 5
+                    \ifthenelse{\equal{\EnableFifthEducation}{y}}{
+                        \ResumeEntry \Institute\Timespan\Coursework\Location
+                        \ifthenelse{\equal{\FifthEducationAchievements}{}}{}
+                        {
+                            \ResumeItemList
+                            \foreach \Achievement in \FifthEducationAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 6
+                    \ifthenelse{\equal{\EnableSixthEducation}{y}}{
+                        \ResumeEntry \Institute\Timespan\Coursework\Location
+                        \ifthenelse{\equal{\SixthEducationAchievements}{}}{}
+                        {
+                            \ResumeItemList
+                            \foreach \Achievement in \SixthEducationAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{} 
+                \or
+                    % Case 7
+                    \ifthenelse{\equal{\EnableSeventhEducation}{y}}{
+                        \ResumeEntry \Institute\Timespan\Coursework\Location
+                        \ifthenelse{\equal{\SeventhEducationAchievements}{}}{}
+                        {
+                            \ResumeItemList
+                            \foreach \Achievement in \SeventhEducationAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 8
+                    \ifthenelse{\equal{\EnableEighthEducation}{y}}{
+                        \ResumeEntry \Institute\Timespan\Coursework\Location
+                        \ifthenelse{\equal{\EighthEducationAchievements}{}}{}
+                        {
+                            \ResumeItemList
+                            \foreach \Achievement in \EighthEducationAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \or
+                    % Case 9
+                    \ifthenelse{\equal{\EnableNinthEducation}{y}}{
+                        \ResumeEntry \Institute\Timespan\Coursework\Location
+                        \ifthenelse{\equal{\NinthEducationAchievements}{}}{}
+                        {
+                            \ResumeItemList
+                            \foreach \Achievement in \NinthEducationAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{} 
+                \or
+                    % Case 10
+                    \ifthenelse{\equal{\EnableTenthEducation}{y}}{
+                        \ResumeEntry \Institute\Timespan\Coursework\Location
+                        \ifthenelse{\equal{\TenthEducationAchievements}{}}{}
+                        {
+                            \ResumeItemList
+                            \foreach \Achievement in \TenthEducationAchievements {
+                                \ResumeItem \Achievement
+                            }
+                            \ResumeItemListClose
+                        }
+                    }{}
+                \fi
             }
         \ResumeEntryListClose
 }{}
