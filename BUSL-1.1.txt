@@ -1,0 +1,15 @@
+Business Source License 1.1
+
+TERMS
+
+1. Use Limitation:
+   You are free to use this software for personal or non-commercial purposes.
+
+2. Modification & Distribution:
+   You may NOT modify, distribute, sublicense, or make derivative works of this software without obtaining prior written permission from Khaled Hasni.
+
+3. Commercial Use:
+   Any commercial use of this software (including but not limited to selling, integrating into other paid software, or offering as a service) requires a separate license agreement from Khaled Hasni.
+
+4. Disclaimer:
+   This software is provided "as-is," without warranties of any kind.
