@@ -1,7 +1,7 @@
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TeXfolio ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % TeXfolio Resume template
 % Designed & Created by: Khaled Hasni
-% Shared & Distributed under the terms of the MIT license
+% Shared & Distributed under the terms of the BUSL license
 % customize.tex: Customizes the resume by adding/removing certain features
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -9,6 +9,8 @@
 % 1) Personal information:
 % Use these string literals to set your personal information (Full name, Job title, Phone number, Email address, Linkedin profile, Github profile).
 % This information will be displayed in the resume header.
+% Notes: * Full name and job title are mandatory.
+%        * Phone number, Email address, Linkedin profile and Github profile are all optional. Use the toggle switches below to remove any of them if you don't wish to have them in your resume header.
 \def\MyFullName{Khaled Hasni}
 \def\MyJobTitle{Software Engineer | Firmware Consultant}
 \def\MyPhoneNumber{+x xx xxx xxx}
@@ -17,10 +19,15 @@
 \def\MyGithubProfile{github.com/KhaledHasni}
 
 % 2) Toggle switches:
-% Use these to toggle some of the resume header features on and off
+% Use these to toggle some of the resume header features on and off.
 % y --> On
 % n --> Off
-% Example:
+% Examples:
+% \newcommand{\SmallCaps}{n} to have non-initial letters lowercased in your full name 
+% \newcommand{\PhoneNbr}{n} to remove the phone number entry from the resume header 
+% \newcommand{\EmailAddr}{n} to remove the email address entry from the resume header
+% \newcommand{\LinkedinProf}{n} to remove the Linkedin profile entry from the resume header
+% \newcommand{\GithubProf}{n} to remove the Github profile entry from the resume header
 % \newcommand\UseIcons{n} to remove all icons (phone, email, linkedin, github)
 \newcommand{\SmallCaps}{y}
 \newcommand{\PhoneNbr}{y}
@@ -32,6 +39,7 @@
 % *************************** Professional Experience Section ***************************
 
 % 1) Toggle switches:
+% Use this to keep/remove the Professional Experience section.
 % y --> Keep Professional Experience section
 % n --> Remove Professional Experience section
 \newcommand{\ProfessionalExperience}{y}
@@ -39,10 +47,10 @@
 % Use these toggle switches to add/take away a professional experience.
 % y --> Keep professional experience
 % n --> Remove professional experience
-% Example: If you wish to mention 2 professional experiences, set the first and second toggle switches and clear the rest:
+% Example: If you wish to mention 3 professional experiences, set the 1st, 2nd and 3rd toggle switches and clear the rest:
 % \newcommand{\EnableFirstProfessionalExperience}{y}
 % \newcommand{\EnableSecondProfessionalExperience}{y}
-% \newcommand{\EnableThirdProfessionalExperience}{n}
+% \newcommand{\EnableThirdProfessionalExperience}{y}
 % \newcommand{\EnableFourthProfessionalExperience}{n}
 % \newcommand{\EnableFifthProfessionalExperience}{n}
 % \newcommand{\EnableSixthProfessionalExperience}{n}
@@ -50,6 +58,7 @@
 % \newcommand{\EnableEighthProfessionalExperience}{n}
 % \newcommand{\EnableNinthProfessionalExperience}{n}
 % \newcommand{\EnableTenthProfessionalExperience}{n}
+%
 % Note: A maximum of 10 experiences is supported.
 \newcommand{\EnableFirstProfessionalExperience}{y}
 \newcommand{\EnableSecondProfessionalExperience}{y}
@@ -63,11 +72,11 @@
 \newcommand{\EnableTenthProfessionalExperience}{n}
 
 % 2) Professional Experience listings:
-% Use this to enumerate the different professional experiences you had. There's no limit on the number of experiences you can list.
-% Every experience should contain at most 4 entries (Institute, Timespan, Role, Location).
-% Don't forget the comma ',' seperator if you add/remove entries.
-% Removing an entry is possible. To do that, make sure to leave an empty set of curly brackets {}.
-% !!! IMPORTANT NOTE: The number of entries here should match the number of professional experiences set by the toggle switches above !!!
+% Use this to enumerate the different professional experiences you have. A maximum of 10 experiences is supported.
+% Every experience should contain at most 4 items: {Institute}/{Timespan}/{Role}/{Location}.
+% Removing an item is possible. To do that, make sure to leave an empty set of curly brackets {}. Example: {Institute}/{}/{Role}/{Location} --> no timespan will show up in this entry.
+% Don't forget to add/remove the comma ',' seperator if you want to add/remove entries.
+% !!! IMPORTANT NOTE: Only the amount of professional experiences set by the toggle switches above will be considered. i.e if only 3 toggle switches are set and 4 entries are defined here, only the first 3 will be considered !!!
 \newcommand{\ProfessionalExperienceEntries}
 {
     % 1st professional experience
@@ -79,6 +88,12 @@
 }
 
 % 3) Achievements and highlights of all professional experiences:
+% Use these to enumerate your achievements and highlights at your different professional experiences.
+% There's no limit to the number of achievements you can list for every professional experience.
+%
+% Notes: * If you don't wish to list any achievements, make sure to leave the command entirely empty. Example: \newcommand{\FirstProfessionalExperienceAchievements}{} --> No achievements will show up for your 1st professional experience.
+%        * Don't forget to add/remove the comma ',' seperator if you want to add/remove entries.
+%        * Only the professional experiences set by the toggle switches above will be considered. i.e if only toggle switches 2, 7 and 9 are set for example, achievements in the 1st, 3rd, 4th, 5th, 6th, 8th and 10th professional experiences will not be considered.
 
 % List 1st professional experience achievements here if applicable
 \newcommand{\FirstProfessionalExperienceAchievements}
@@ -134,10 +149,27 @@
 % ********************************** Projects Section ***********************************
 
 % 1) Toggle switches:
+% Use this to keep/remove the Projects section.
 % y --> Keep Projects section
 % n --> Remove Projects section
 \newcommand{\Projects}{y}
 
+% Use these toggle switches to add/take away a project.
+% y --> Keep project
+% n --> Remove project
+% Example: If you wish to mention 3 projects, set the 1st, 2nd and 3rd toggle switches and clear the rest:
+% \newcommand{\EnableFirstProject}{y}
+% \newcommand{\EnableSecondProject}{y}
+% \newcommand{\EnableThirdProject}{y}
+% \newcommand{\EnableFourthProject}{n}
+% \newcommand{\EnableFifthProject}{n}
+% \newcommand{\EnableSixthProject}{n}
+% \newcommand{\EnableSeventhProject}{n}
+% \newcommand{\EnableEighthProject}{n}
+% \newcommand{\EnableNinthProject}{n}
+% \newcommand{\EnableTenthProject}{n}
+%
+% Note: A maximum of 10 projects is supported.
 \newcommand{\EnableFirstProject}{y}
 \newcommand{\EnableSecondProject}{y}
 \newcommand{\EnableThirdProject}{y}
@@ -150,10 +182,11 @@
 \newcommand{\EnableTenthProject}{n}
 
 % 2) Projects listings:
-% Use this to enumerate the different projects you have. There's no limit on the number of projects you can list.
-% Every project should contain at most 3 entries (Name, Keywords, Timespan).
-% Don't forget the comma ',' seperator if you add/remove entries.
-% Removing an entry is possible. To do that, make sure to leave an empty set of curly brackets {}.
+% Use this to enumerate the different projects you have. A maximum of 10 projects is supported.
+% Every project should contain at most 3 items: {ProjectName}/{Keywords}/{Timespan}.
+% Removing an item is possible. To do that, make sure to leave an empty set of curly brackets {}. Example: {ProjectName}/{}/{Timespan} --> no keywords will show up in this entry.
+% Don't forget to add/remove the comma ',' seperator if you want to add/remove entries.
+% !!! IMPORTANT NOTE: Only the amount of projects set by the toggle switches above will be considered. i.e if only 3 toggle switches are set and 4 entries are defined here, only the first 3 will be considered !!!
 \newcommand{\ProjectsEntries}
 {
     % 1st project 
@@ -163,6 +196,14 @@
     % 3rd project
     {Transaction Management GUI}/{Java, Eclipse, JavaFX}/{October 2020}
 }
+
+% 3) Achievements and highlights of all projects:
+% Use these to enumerate your achievements and highlights in your different projects.
+% There's no limit to the number of achievements you can list for every project.
+%
+% Notes: * If you don't wish to list any achievements, make sure to leave the command entirely empty. Example: \newcommand{\FirstProjectAchievements}{} --> No achievements will show up for your 1st project.
+%        * Don't forget to add/remove the comma ',' seperator if you want to add/remove entries.
+%        * Only the projects set by the toggle switches above will be considered. i.e if only toggle switches 2, 7 and 9 are set for example, achievements in the 1st, 3rd, 4th, 5th, 6th, 8th and 10th projects will not be considered.
 
 % List 1st project achievements here if applicable
 \newcommand{\FirstProjectAchievements}
@@ -219,26 +260,17 @@
 
 % ************************************ Skills Section *************************************
 
-% 1) Toggle switches:
+% 1) Toggle switch:
+% Use this to keep/remove the Skills section.
 % y --> Keep Skills section
 % n --> Remove Skills section
 \newcommand{\Skills}{y}
 
-% Use these toggle switches to keep/remove the different skill categories.
-% y --> Keep skill category
-% n --> Remove skill category
-% A maximum of 10 categories is supported.
-\newcommand{\FirstCategory}{y}
-\newcommand{\SecondCategory}{y}
-\newcommand{\ThirdCategory}{y}
-\newcommand{\FourthCategory}{y}
-\newcommand{\FifthCategory}{y}
-\newcommand{\SixthCategory}{y}
-\newcommand{\SeventhCategory}{y}
-\newcommand{\EighthCategory}{y}
-\newcommand{\NinthCategory}{y}
-\newcommand{\TenthCategory}{y}
-
+% 2) Skills listings:
+% Use this to enumerate the different skills you have.
+% A skill entry is made up of 2 items: {Skill category}/{Individual skills}
+% There's no limit on the number of entries you can list here.
+% Don't forget to add/remove the comma ',' seperator if you want to add/remove entries.
 \newcommand{\SkillsEntries}
 {
     {Lanuguages}/{C, Python, Shell},
@@ -251,10 +283,27 @@
 % ********************************** Education Section **********************************
 
 % 1) Toggle switches:
+% Use this to keep/remove the Education section.
 % y --> Keep Education section
 % n --> Remove Education section
 \newcommand{\Education}{y}
 
+% Use these toggle switches to add/take away an education entry.
+% y --> Keep education entry
+% n --> Remove education entry
+% Example: If you wish to mention 3 education entries, set the 1st, 2nd and 3rd toggle switches and clear the rest:
+% \newcommand{\EnableFirstEducation}{y}
+% \newcommand{\EnableSecondEducation}{y}
+% \newcommand{\EnableThirdEducation}{y}
+% \newcommand{\EnableFourthEducation}{n}
+% \newcommand{\EnableFifthEducation}{n}
+% \newcommand{\EnableSixthEducation}{n}
+% \newcommand{\EnableSeventhEducation}{n}
+% \newcommand{\EnableEighthEducation}{n}
+% \newcommand{\EnableNinthEducation}{n}
+% \newcommand{\EnableTenthEducation}{n}
+%
+% Note: A maximum of 10 entries is supported.
 \newcommand{\EnableFirstEducation}{y}
 \newcommand{\EnableSecondEducation}{y}
 \newcommand{\EnableThirdEducation}{y}
@@ -267,10 +316,11 @@
 \newcommand{\EnableTenthEducation}{n}
 
 % 2) Education listings:
-% Use this to enumerate the education experiences you had. There's no limit on the number of experiences you can list.
-% Every experience should contain at most 4 entries (Institute, Timespan, Coursework, Location).
-% Don't forget the comma ',' seperator if you add/remove entries.
-% Removing an entry is possible. To do that, make sure to leave an empty set of curly brackets {}.
+% Use this to enumerate the different education experiences you have. A maximum of 10 entries is supported.
+% Every education experience should contain at most 4 items: {Institute}/{Timespan}/{Coursework}/{Location}.
+% Removing an item is possible. To do that, make sure to leave an empty set of curly brackets {}. Example: {Institute}/{Timespan}/{Coursework}/{} --> no location will show up in this entry.
+% Don't forget to add/remove the comma ',' seperator if you want to add/remove entries.
+% !!! IMPORTANT NOTE: Only the amount of education experiences set by the toggle switches above will be considered. i.e if only 3 toggle switches are set and 4 entries are defined here, only the first 3 will be considered !!!
 \newcommand{\EducationEntries}
 {
     % Most recent education experience 
@@ -280,6 +330,14 @@
     % 3rd most recent education experience
     {Lycee Pilote Ariana}/{November 2021 -- February 2024}/{Highschool degree}/{Tunis, Tunisia}
 }
+
+% 3) Achievements and highlights of all education experiences:
+% Use these to enumerate your achievements and highlights in your education experiences.
+% There's no limit to the number of achievements you can list for every education experience.
+%
+% Notes: * If you don't wish to list any achievements, make sure to leave the command entirely empty. Example: \newcommand{\FirstEducationAchievements}{} --> No achievements will show up for your 1st education experience.
+%        * Don't forget to add/remove the comma ',' seperator if you want to add/remove entries.
+%        * Only the education experiences set by the toggle switches above will be considered. i.e if only toggle switches 2, 7 and 9 are set for example, achievements in the 1st, 3rd, 4th, 5th, 6th, 8th and 10th education experiences will not be considered.
 
 % List 1st education achievements here if applicable
 \newcommand{\FirstEducationAchievements}
