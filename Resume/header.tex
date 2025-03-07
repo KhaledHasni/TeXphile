@@ -1,7 +1,7 @@
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~ TeXfolio ~~~~~~~~~~~~~~~~~~~~~~~~~~
 % TeXfolio Resume template
 % Designed & Created by: Khaled Hasni
-% Shared & Distributed under the terms of the MIT license
+% Shared & Distributed under the terms of the BUSL license
 % header.tex: Creates the layout of the resume's header
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -28,7 +28,7 @@
 
     % *Phone number entry*
     % Standard font, fontsize is set to 10pt.
-    % Inserts a phone icon from the FontAwesome package and vertically aligns it with the text.
+    % Inserts a phone icon from the FontAwesome package (if UseIcons is set to "y") and vertically aligns it with the text.
     % Entry can be removed if PhoneNbr is set to "n".
     \makebox[0.2\textwidth][c]{
     \ifthenelse{\equal{\PhoneNbr}{y}}{
@@ -43,7 +43,7 @@
 
     % *E-mail entry*
     % Standard font, fontsize is set to 10pt.
-    % Inserts an email icon from the FontAwesome package and vertically aligns it with the text.
+    % Inserts an email icon from the FontAwesome package (if UseIcons is set to "y") and vertically aligns it with the text.
     % Creates a hyperlink to the provided email address.
     % Entry can be removed if EmailAddr is set to "n".
     \ifthenelse{\equal{\EmailAddr}{y}}{
@@ -57,8 +57,8 @@
 
     % *Linkedin entry*
     % Standard font, fontsize is set to 10pt.
-    % Inserts Linkedin's icon from the FontAwesome package and vertically aligns it with the text.
-    % Creates a hyperlink to the provided linkedin profile.
+    % Inserts Linkedin's icon from the FontAwesome package (if UseIcons is set to "y") and vertically aligns it with the text.
+    % Creates a hyperlink to the provided Linkedin profile.
     % Entry can be removed if LinkedinProf is set to "n".
     \ifthenelse{\equal{\LinkedinProf}{y}}{
         \ifthenelse{\equal{\UseIcons}{y}}{
@@ -71,7 +71,7 @@
 
     % *Github entry*
     % Standard font, fontsize is set to 10pt.
-    % Inserts Github's icon from the FontAwesome package and vertically aligns it with the text.
+    % Inserts Github's icon from the FontAwesome package (if UseIcons is set to "y") and vertically aligns it with the text.
     % Creates a hyperlink to the provided Github profile.
     % Entry can be removed if GithubProf is set to "n".
     \ifthenelse{\equal{\GithubProf}{y}}{
