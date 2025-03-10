@@ -1,8 +1,6 @@
 <div align="center">
-  <img src="Documents/Image/TeXphile_logo.png" alt="Logo" />
+  <img src="Documents/Image/TeXphile_logo.svg" alt="Logo" style="width: 600px; height: auto;"/>
 </div>
-
-
 
 <p align="center">
   <strong>A career document customization framework written entirely in TeX</strong>
