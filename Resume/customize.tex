@@ -80,11 +80,11 @@
 \newcommand{\ProfessionalExperienceEntries}
 {
     % 1st professional experience
-    {SoftAtHome}/{February 2024 -- Present}/{Embedded Linux Engineer}/{Wijgmaal, Belgium (Remote)},
+    {SoftAtHome}/{February 2024 -- Present}/{Embedded Linux Developer}/{Wijgmaal, Belgium (Remote)},
     % 2nd professional experience
     {Valeo}/{March 2023 -- February 2024}/{Lead Firmware Consultant}/{Paris, France (Remote)},
     % 3rd professional experience
-    {Sofia Technologies}/{November 2021 -- February 2024}/{Embedded Software Engineer}/{Tunis, Tunisia}
+    {Sofia Technologies}/{November 2021 -- February 2023}/{Embedded Software Developer}/{Tunis, Tunisia}
 }
 
 % 3) Achievements and highlights of all professional experiences:
@@ -98,24 +98,31 @@
 % List 1st professional experience achievements here if applicable
 \newcommand{\FirstProfessionalExperienceAchievements}
 {
-    {Developed a service to automatically perform a set of unit tests daily on a product in development in order to decrease time needed for team members to identify and fix bugs/issues},
-    {Incorporated scripts using Python and PowerShell to aggregate XML test results into an organized format and to load the latest build code onto the hardware, so that daily testing can be performed},
-    {Utilized Jenkins to provide a continuous integration service in order to automate the entire process of loading the latest build code and test files, running the tests, and generating a report of the results once per day}
+    {Collaborated within the networking team to develop and maintain networking functionalities},
+    {Designed and implemented a custom WireGuard plugin supporting various VPN topologies (Point-to-Site, Site-to-Site, Roadwarrior), enabling secure remote access for 50+ customer deployments},
+    {Averaged 3 feature integrations per month into the WireGuard plugin based on evolving requirements and feedback},
+    {Led teamwide training on post-upgrade data recovery, reducing incident resolution time by 70\%}
 }
 
 % List 2nd professional experience achievements here if applicable
 \newcommand{\SecondProfessionalExperienceAchievements}
 {
-    {Assisted in development of the front end of a mobile application for iOS/Android using Dart and the Flutter framework},
-    {Worked with Google Firebase to manage user inputted data across multiple platforms including web and mobile apps}
+    {Led a team of 5 developers across 2 countries to design and develop an in-car BLE connectivity software suite},
+    {Created a cross-platform software development kit (TI CC26x2, NXP KW45) for BLE keyfob and CCC digital key apps},
+    {Co-authored the SDK as an RTOS subsystem with BSP, Kernel, Middleware, Application and Command-line layers},
+    {Led efforts to enhance code portability by introducing abstraction to all layers, reducing overhead maintenance by 80\%},
+    {Provided technical support for a group of 4 junior developers and held VectorCAST training sessions for the entire team}
 }
 
 % List 3rd professional experience achievements here if applicable
 \newcommand{\ThirdProfessionalExperienceAchievements}
 {
-    {Collaborated with team members using version control systems such as Git to organize modifications and assign tasks},
-    {Utilized Android Studio as a development environment in order to visualize the application in both iOS and Android},
-    {Explored ways to visualize and send a daily report of test results to team members  using HTML, Javascript, and CSS}
+    {Engineered a framework for event-driven IoT applications to standardize products under a unified software architecture},
+    {Ensured the framework is platform-agnostic across multiple MCUs (STM32, nRF5x, SAM D) and Cortex-M targets},
+    {Integrated both LoRaWAN and Nordic's BLE protocol stacks into the framework},
+    {Led efforts to allow applications leveraging the framework to be easily customizable using auto-generation tools, reducing the average development time by 65\%},
+    {Built a power-optimized cattle tracking system, a LoRa-based alarm system, a smart low-cost oxygen concentrator},
+    {Trained and mentored new recruits and interns, resulting in an 80\% intern-to-full-time hire conversion rate}
 }
 
 % List 4th professional experience achievements here if applicable
@@ -190,11 +197,9 @@
 \newcommand{\ProjectsEntries}
 {
     % 1st project 
-    {Gym Reservation Bot}/{Python, Selenium, Google Cloud Console}/{January 2021},
+    {LoRa Mesh Network}/{C, STM32, LoRa/LoRaWAN, Python}/{March 2021 -- August 2021},
     % 2nd project
-    {Ticket Price Calculator App}/{Java, Android Studio}/{November 2020},
-    % 3rd project
-    {Transaction Management GUI}/{Java, Eclipse, JavaFX}/{October 2020}
+    {Wireless Padlock}/{C, nRF52/nRF51, BLE}/{February 2024 -- May 2024}
 }
 
 % 3) Achievements and highlights of all projects:
@@ -208,26 +213,27 @@
 % List 1st project achievements here if applicable
 \newcommand{\FirstProjectAchievements}
 {
-    {Developed an automatic bot using Python and Google Cloud Console to register myself for a timeslot at my school gym},
-    {Implemented Selenium to create an instance of Chrome in order to interact with the correct elements of the web page},
-    {Created a Linux virtual machine to run on Google Cloud so that the program is able to run everyday from the cloud},
-    {Used Cron to schedule the program to execute automatically at 11 AM every morning so a reservation is made for me}
+    {Developed a transport layer for a LoRa mesh network as an alternative to traditional LoRaWAN deployments},
+    {Utilized a dynamic Join/Leave mechanism allowing for a self-sustaining network of up to 15 nodes},
+    {Implemented a 4-layer packet transmission scheme to ensure reliable data transfer and avoid collisions and bottlenecks},
+    {Stress-tested the mesh under high node traffic ($\sim$1 packet/min/node at SF11) to evaluate performance and reliability},
+    {Applied 3+ optimization techniques to fine-tune the system's performance and reduce memory footprint by 8\%}
 }
 
 % List 2nd project achievements here if applicable
 \newcommand{\SecondProjectAchievements}
 {
-    {Created an Android application using Java and Android Studio to calculate ticket prices for trips to museums in NYC},
-    {Processed user inputted information in the back-end of the app to return a subtotal price based on the tickets selected},
-    {Utilized the layout editor to create a UI for the application in order to allow different scenes to interact with each other}
+    {Developed a smart, wireless padlock that grants access to the premises of a critical facility to authorized users exclusively},
+    {Created a sophisticated sign-up/login procedure and a custom flash storage implementation to keep a user database},
+    {Designed a key attribution system that grants users 5 different types of keys that can be used to access the facility},
+    {Configured and deployed custom BLE services for signup, key issuance, and admin log retrieval},
+    {Built a BLE timekeeping system using the Current Time Service to enforce time-based key access and track expired keys}
 }
 
 % List 3rd project achievements here if applicable
 \newcommand{\ThirdProjectAchievements}
 {
-    {Designed a sample banking transaction system using Java to simulate the common functions of using a bank account},
-    {Used JavaFX to create a GUI that supports actions such as creating an account, deposit, withdraw, list all acounts, etc},
-    {Implemented object-oriented programming practices such as inheritance to create different account types and databases}
+    {}
 }
 
 % List 4th project achievements here if applicable
@@ -273,11 +279,13 @@
 % Don't forget to add/remove the comma ',' seperator if you want to add/remove entries.
 \newcommand{\SkillsEntries}
 {
-    {Languages}/{C, Python, Shell},
-    {Developer Tools}/{Docker, Kubernetes, Klocwork, Valgrind},
-    {Unit Testing tools \& Frameworks}/{VectorCAST, Cmocka, Unity},
-    {Revision Control}/{Git, Mercurial},
-    {Build \& Deployment}/{Yocto, Make, PlatformIO}
+    {Programming Languages \& Scripting}/{C, Python, Shell},
+    {HW Platforms}/{STM32, nRF5x, Microchip SAM D, NXP KW45, TI CC26x2, Swisscom Internet-box 4},
+    {RTOS}/{FreeRTOS, Zephyr},
+    {Unit Testing Tools \& Frameworks}/{VectorCAST, Cmocka, Unity},
+    {Revision Control}/{Git, SVN},
+    {Build Systems \& Development Ecosystems}/{Yocto, PlatformIO},
+    {Languages}/{English, French, Arabic}
 }
 
 % ********************************** Education Section **********************************
@@ -286,7 +294,7 @@
 % Use this to keep/remove the Education section.
 % y --> Keep Education section
 % n --> Remove Education section
-\newcommand{\Education}{y}
+\newcommand{\Education}{n}
 
 % Use these toggle switches to add/take away an education entry.
 % y --> Keep education entry
